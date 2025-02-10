@@ -1,4 +1,5 @@
 
+/* Header text and color */
 header {
     background-color: #333;
     color: white;
@@ -6,10 +7,54 @@ header {
     padding: 20px;
 }
 
+/* Header text */
 h1 {
     font-family: 'Creepster', cursive; 
 }
 
+/* Space between nav-bar and header text */
 .navbar {
     margin-bottom: 30px;
+}
+
+/* Background color */
+body {
+    background-color: #ca7f4d !important;
+}
+
+/* Information text (Our Story) */
+pre{
+    word-wrap: break-word; /* Bryt ord vid behov för att passa inom skärmen */
+    overflow-x: auto; /* Om texten blir för lång, visa en horisontell scrollbar */
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 1rem !important;
+}
+
+/* Add space between email-link and "Find Us" */
+.spacer {
+    margin-bottom: 30px; /* Justera mellanrummet efter behov */
+}
+
+/* Apperance for map */
+.map-container {
+    width: 100%;  /* Gör så att kartan tar upp hela behållarens bredd */
+    height: 500px; /* Sätt höjden, justera om du vill ha större/mindre karta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Skapa lite utrymme ovanför kartan */
+}
+
+.map-container iframe {
+    width: 100%; /* Gör kartan lika bred som .map-container */
+    height: 100%; /* Fyll upp hela höjden */
+    border: none; /* Tar bort standardramen */
+}
+
+/* Bottom border */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px;
 }
