@@ -1,4 +1,5 @@
 
+/* Header text and color */
 header {
     background-color: #333;
     color: white;
@@ -6,29 +7,41 @@ header {
     padding: 20px;
 }
 
+/* Header text */
 h1 {
     font-family: 'Creepster', cursive; 
 }
 
+/* Space between nav-bar and header text */
 .navbar {
     margin-bottom: 30px;
 }
 
-p {
-    font-family:cursive;
-    font-size: 20px;
-}
+/* Background image */
 body {
     background-image: url('../Images/main_back.jpg');
     background-size: cover;
     background-position: center;  
 }
 
-.rotate-img{
-    animation: rotateMoveGrowLogo 7s ease-in-out forwards;
+/* Main section text */
+p {
+    font-family:cursive;
+    font-size: 20px;
 }
 
-@keyframes rotateMoveGrowLogo{
+/* Visit our Shop-button */
+.custom-btn{
+    background-color: #333 !important; /* Anpassad färg */
+    color: white !important;
+}
+
+/* Spider animation */
+.rotate-img{
+    animation: growRotateMoveLogo 7s ease-in-out forwards;
+}
+
+@keyframes growRotateMoveLogo{
     0% {
         transform: rotate(0deg);
         transform: scale(0.1);
@@ -39,10 +52,10 @@ body {
         
     }
     100% {
-        transform: rotate(185deg) translateY(+1.3cm);
+        transform: rotate(186deg) translateY(+1.3cm);
 }}
 
-
+/* Bottom border */
 footer {
     background-color: #333;
     color: white;
