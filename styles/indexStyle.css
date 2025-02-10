@@ -15,14 +15,24 @@ h1 {
 }
 
 body {
-    background-color: #b4baca !important;
+    background-image: url('../Images/main_back.jpg');
+    background-size: cover;
+    background-position: center;
+    
    
 }
 
+.rotate-img{
+    animation: rotateMoveLogo 4s ease-in-out forwards;
+}
 
-
-
-
-
-
-
+@keyframes rotateMoveLogo{
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(220deg);
+    }
+    100% {
+        transform: rotate(185deg) translateY(+1.3cm);
+}}
