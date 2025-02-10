@@ -1,0 +1,15 @@
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Creepster', cursive; 
+}
+
+.navbar {
+    margin-bottom: 30px;
+}
