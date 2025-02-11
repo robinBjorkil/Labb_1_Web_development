@@ -1,0 +1,24 @@
+
+/* Header apperance */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+/* Header text */
+h2 {
+    font-family: 'Creepster', cursive; 
+    text-align: center;
+}
+
+/* Space between nav-bar and header text */
+.navbar {
+    margin-bottom: 30px;
+}
+
+/* Background color */
+body {
+    background-color: #ca7f4d !important;
+}
+

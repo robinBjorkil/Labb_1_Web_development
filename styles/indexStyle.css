@@ -1,20 +1,28 @@
 
-/* Header text and color */
+/* Header apperance */
 header {
     background-color: #333;
     color: white;
-    text-align: center;
     padding: 20px;
 }
 
 /* Header text */
 h1 {
     font-family: 'Creepster', cursive; 
+    text-align: center;
 }
 
 /* Space between nav-bar and header text */
 .navbar {
+    text-align: center;
     margin-bottom: 30px;
+}
+
+/* Drop-down-menyn för mindre skärmar centreras vid knapptryck */
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center; /* Justerar texten lite närmare knappen */
+    }
 }
 
 /* Background image */
@@ -62,3 +70,5 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+
