@@ -18,13 +18,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* Drop-down-menyn för mindre skärmar centreras vid knapptryck */
-@media (max-width: 991px) {
-    .navbar-nav {
-        text-align: center; /* Justerar texten lite närmare knappen */
-    }
-}
-
 /* Background image */
 body {
     background-image: url('../Images/main_back.jpg');
