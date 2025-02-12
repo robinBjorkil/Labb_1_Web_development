@@ -92,6 +92,34 @@ document.addEventListener("DOMContentLoaded", () =>{
         });
     });
 
+    /* Funktion för att lägga till och ta bort enskilda köp i kundvagnen "Cart" */
+        function addToCart(product){
+
+            /* 1. Variabel för att hålla reda på mina köp i en li "list item
+               2. Bootstrap för ett snyggare utseende*/
+            const cartItem = document.createElement("li");
+            cartItem.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
+
+            /* Gör en lista av mina köp med namn och pris och en röd X-knapp för att ta bort */
+            cartItem.innerHTML = `
+            ${product.name} - ${product.price} SEK
+            <button class="btn btn-danger btn-sm remove-from-cart">X</button>
+            `;
+
+            /* Lägger till produkten i kundvagnens lista på sidan, sparar den i arrayen cart och uppdaterar det totala priset. */
+            cartList.appendChild(cartItem);
+            cartItem.push(product);
+            updateTotal(product.price);
+
+            /* Eventlistener med click för X-knappen för att ta bort */
+            cartItem.querySelector(".remove-from-cart").addEventListener("click", () => {
+                removeFromCart(product, cartItem);
+            });  
+        }
+
+
+    
+
 
 
 
