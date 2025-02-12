@@ -58,9 +58,15 @@ document.addEventListener("DOMContentLoaded", () =>{
         }
     ];
 
-/* En variabel som får hålla produkterna */
+/* variabler för att hålla produkterna, lägga till produkter, uppdatera pris
+    tömma kundvagnen, uppdatera kundvagns-listan och totalpriset */
     const productContainer = document.getElementById("products");
+    const cartList = document.getElementById("cart");
+    const totalPriceElement = document.getElementById("total-price");
+    const clearCartButton = document.getElementById("clear-cart");
 
+    let cart = [];
+    let total = 0;
      
 /* Här loopar jag igenom varje element i "products" och gör något med dessa element */
     products.forEach((product, index) => {
@@ -137,6 +143,6 @@ document.addEventListener("DOMContentLoaded", () =>{
         total = 0;
         totalPriceElement.textContent = "Total 0 SEK";
     });
-    
+
 
 });
