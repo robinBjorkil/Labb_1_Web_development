@@ -74,17 +74,17 @@ document.addEventListener("DOMContentLoaded", () =>{
         /* 1. Skapar en div-behållare för varje produkt
            2. Skapar en responsiv layout med Bootstrap CSS för div:en */
         const productCard = document.createElement("div");
-        productCard.classList.add("col-md-4");
+        productCard.classList.add("col-md-4", "mb-4");
 
         /* Varje div productCard får sitt innehåll  bild, namn, price och köpknapp */
         productCard.innerHTML = `
-            <div class="card">
+            <div class="card h-100">
                 <img src="${product.img}" class="card-img-top" alt="${product.name}">
-                <div class="card-body">
+                <div class="card-body d-flex flex-column">
                     <h5 class="card-title">${product.name}</h5>
                     <p class="card-text"><em>(${product.latinName})</em></p>
                     <p class="card-text">${product.price} SEK</p>
-                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    <button class="btn btn-success mt-auto add-to-cart">Add to Cart</button>
                 </div>
             </div>
         `;
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
         /* Lägger till produkten i kundvagnens lista på sidan, sparar den i arrayen cart och uppdaterar det totala priset. */
         cartList.appendChild(cartItem);
-        cartItem.push(product);
+        cart.push(product);
         updateTotal(product.price);
 
         /* Eventlistener med click för X-knappen för att ta bort */

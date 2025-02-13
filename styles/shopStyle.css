@@ -15,10 +15,38 @@ h2 {
 /* Space between nav-bar and header text */
 .navbar {
     margin-bottom: 30px;
+    
 }
 
 /* Background color */
 body {
-    background-color: #ca7f4d !important;
+    background-color: #b4baca !important;
 }
 
+.card {
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    height: 200px;
+    object-fit:cover;
+}
+
+
+.product-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.cart-container {
+    padding: 20px 15%;
+    margin: 0 auto 40px auto;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: 80%;
+    box-sizing: border-box;
+}
