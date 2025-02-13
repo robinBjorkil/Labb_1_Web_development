@@ -35,11 +35,15 @@ p {
 .custom-btn{
     background-color: #333 !important; /* Anpassad färg */
     color: white !important;
+    position: relative;
+    z-index: 2;
 }
 
 /* Spider animation */
 .rotate-img{
     animation: growRotateMoveLogo 7s ease-in-out forwards;
+    position: relative;
+    z-index: 1;
 }
 
 @keyframes growRotateMoveLogo{
@@ -53,7 +57,7 @@ p {
         
     }
     100% {
-        transform: rotate(186deg) translateY(+1.3cm);
+        transform: rotate(186deg) translateY(+1.1cm);
 }}
 
 /* Bottom border */

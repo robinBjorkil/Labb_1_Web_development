@@ -50,3 +50,11 @@ body {
     width: 80%;
     box-sizing: border-box;
 }
+
+/* Bottom border */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
