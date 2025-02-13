@@ -23,12 +23,13 @@ body {
 }
 
 /* Information text (Our Story) */
-pre{
-    word-wrap: break-word; /* Bryt ord vid behov för att passa inom skärmen */
-    overflow-x: auto; /* Om texten blir för lång, visa en horisontell scrollbar */
-    font-family: 'Roboto', sans-serif !important;
-    font-size: 1rem !important;
+.bold-text {
+    font-weight: bold;
+    white-space: pre-wrap;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
 }
+
 
 /* Add space between email-link and "Find Us" */
 .spacer {
@@ -37,18 +38,18 @@ pre{
 
 /* Apperance for map */
 .map-container {
-    width: 100%;  /* Gör så att kartan tar upp hela behållarens bredd */
-    height: 500px; /* Sätt höjden, justera om du vill ha större/mindre karta */
+    width: 100%;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Skapa lite utrymme ovanför kartan */
+    margin-top: 20px;
 }
 
 .map-container iframe {
-    width: 100%; /* Gör kartan lika bred som .map-container */
-    height: 100%; /* Fyll upp hela höjden */
-    border: none; /* Tar bort standardramen */
+    width: 100%; 
+    height: 100%;
+    border: none;
 }
 
 /* Bottom border */

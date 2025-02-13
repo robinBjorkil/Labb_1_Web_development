@@ -7,54 +7,54 @@ document.addEventListener("DOMContentLoaded", () =>{
         {   name: "Mexican Red Knee",
             latinName: "Brachypelma hamorii",
             price: 750,
-            img: "Images/red_knee.jpg"
+            img: "Images/red_knee.webp"
         },
 
         {   name: "Brazilian Black",
             latinName: "Grammostola pulchra",
             price: 900,
-            img: "Images/brazilian_black.jpg"
+            img: "Images/brazilian_black.webp"
         },
 
         {   name: "Chilean Rose",
             latinName: "Grammostola rosea",
             price: 850,
-            img: "Images/chilean_rose.jpg"
+            img: "Images/chilean_rose.webp"
         },
         {   name: "Brazilian White Knee",
             latinName: "Acanthoscuria geniculata",
             price: 1000,
-            img: "Images/white_knee.jpg"
+            img: "Images/white_knee.webp"
         },
 
         {   name: "Goliath Birdeater",
             latinName: "Theraphosa blondi",
             price: 2500,
-            img: "Images/goliath.jpg"
+            img: "Images/goliath.webp"
         },
 
         {   name: "Green Bottle Blue",
             latinName: "Chromatopelma cyaneopubescens",
             price: 1500,
-            img: "Images/gbb.jpg"
+            img: "Images/gbb.webp"
         },
 
         {   name: "Costa Rican Striped Knee",
             latinName: "Aphonopelma seemanni",
             price: 1200,
-            img: "Images/chestnut_zebra.jpg"
+            img: "Images/chestnut_zebra.webp"
         },
 
         {   name: "Gooty Sapphire Ornamental",
             latinName: "Poecilotheria metallica",
             price: 2300,
-            img: "Images/p_metallica.jpg"
+            img: "Images/p_metallica.webp"
         },
 
         {   name: "Orange Baboon Tarantula",
             latinName: "Pterinochilus murinus",
             price: 1500,
-            img: "Images/p_murinus.jpg"
+            img: "Images/p_murinus.webp"
         }
     ];
 
@@ -79,7 +79,9 @@ document.addEventListener("DOMContentLoaded", () =>{
         /* Varje div productCard får sitt innehåll  bild, namn, price och köpknapp */
         productCard.innerHTML = `
             <div class="card h-100">
-                <img src="${product.img}" class="card-img-top" alt="${product.name}">
+                <img src="${product.img}" class="card-img-top"
+                 ${index < 3 ? "" : 'loading="lazy"'} 
+                 alt="${product.name}">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">${product.name}</h5>
                     <p class="card-text"><em>(${product.latinName})</em></p>
