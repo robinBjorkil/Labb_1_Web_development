@@ -32,6 +32,13 @@ input:focus, select:focus, textarea:focus {
     outline: none;
 }
 
-button:hover {
+.button:hover {
     background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px;
 }
