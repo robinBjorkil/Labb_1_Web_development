@@ -146,5 +146,23 @@ document.addEventListener("DOMContentLoaded", () =>{
         totalPriceElement.textContent = "Total 0 SEK";
     });
 
+    let chuckImg = { img: "Images/chuck_spider.webp" };
+
+    function fetchJoke() {
+        fetch("https://api.chucknorris.io/jokes/random")
+            .then((chuck) => chuck.json())
+            .then((data) => {
+                document.getElementById("chuckJoke").innerHTML = `
+                    <img id="chuckImage" src="${chuckImg.img}" alt="Picture of Chuck Norris">
+                    <p>${data.value}</p>
+                `;
+    
+                
+                document.getElementById("chuckImage").addEventListener("click", fetchJoke);
+            });
+    }
+    
+    fetchJoke();
+
 
 });

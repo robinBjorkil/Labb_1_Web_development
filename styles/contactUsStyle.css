@@ -1,4 +1,8 @@
 
+header {
+    text-align: center;
+
+}
 .contact-form-wrapper {
     display: flex;
     justify-content: center;

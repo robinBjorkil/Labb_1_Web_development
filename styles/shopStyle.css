@@ -4,6 +4,7 @@ header {
     background-color: #333;
     color: white;
     padding: 20px;
+    text-align: center;
 }
 
 /* Header text */
@@ -49,6 +50,25 @@ body {
     background-color: #f9f9f9;
     width: 80%;
     box-sizing: border-box;
+}
+
+/* Chuck Norris API */
+.chuck-container {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.chuck-container #chuckJoke img {
+    width: 200px;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.chuck-container #chuckJoke img:hover {
+    transform: scale(1.1);
 }
 
 /* Bottom border */
