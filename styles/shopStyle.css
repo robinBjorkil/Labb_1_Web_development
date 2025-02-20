@@ -1,25 +1,19 @@
-
-/* Header apperance */
 header {
     background-color: #333;
     color: white;
     padding: 20px;
     text-align: center;
 }
-
-/* Header text */
 h2 {
     font-family: 'Creepster', cursive; 
     text-align: center;
 }
 
-/* Space between nav-bar and header text */
 .navbar {
     margin-bottom: 30px;
     
 }
 
-/* Background color */
 body {
     background-color: #b4baca !important;
 }
@@ -28,20 +22,16 @@ body {
     margin-bottom: 20px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
-
 .card img {
     height: 200px;
     object-fit:cover;
 }
-
 
 .product-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
-
 .cart-container {
     padding: 20px 15%;
     margin: 0 auto 40px auto;
@@ -52,13 +42,30 @@ body {
     box-sizing: border-box;
 }
 
-/* Chuck Norris API */
+.modal-header {
+    background-color: #333;
+    color: #fff;
+}
+.btn-close {
+    filter: brightness(0) invert(1);
+}
+.modal-body {
+    font-family: 'Roboto', sans-serif;
+}
+.modal-body img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.modal-footer {
+    background-color: #333 !important;
+    border-top: 2px solid #ddd;
+}
+
 .chuck-container {
     text-align: center;
     width: 80%;
     margin: auto;
 }
-
 .chuck-container #chuckJoke img {
     width: 200px;
     display: block;
@@ -66,12 +73,10 @@ body {
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
-
 .chuck-container #chuckJoke img:hover {
     transform: scale(1.1);
 }
 
-/* Bottom border */
 footer {
     background-color: #333;
     color: white;
