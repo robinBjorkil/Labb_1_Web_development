@@ -1,42 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Header text and color */
+body {
+    background: linear-gradient(to bottom, #b4baca, #d4d8dc);
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
 header {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.9);
     color: white;
     text-align: center;
     padding: 20px;
+    font-size: 24px;
+    border-bottom: 3px solid #ff4500;
 }
-
 /* Header text */
 h1 {
-    font-family: 'Creepster', cursive; 
+    font-family: 'Creepster', cursive;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Space between nav-bar and header text */
 .navbar {
+    text-align: center;
     margin-bottom: 30px;
 }
 
-/* Background color */
-body {
-    background-color: #b4baca !important;
+.container h4 {
+    text-align: center;
 }
 
-/* Information text (Our Story) */
+/* Information text */
 .bold-text {
     font-weight: bold;
     white-space: pre-wrap;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    margin: 20px auto;
 }
 
-
-/* Add space between email-link and "Find Us" */
 .spacer {
-    margin-bottom: 30px; /* Justera mellanrummet efter behov */
+    margin-bottom: 30px;
 }
 
-/* Apperance for map */
 .map-container {
     width: 100%;
     height: 500px;
@@ -44,18 +59,20 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
-
 .map-container iframe {
     width: 100%; 
     height: 100%;
     border: none;
 }
 
-/* Bottom border */
 footer {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.9);
     color: white;
     text-align: center;
     padding: 40px;
+    border-top: 3px solid #ff4500;
 }

@@ -1,71 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Header apperance */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  
+                url('../Images/main_back.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    color: white; 
+}
+
 header {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.9); 
     color: white;
     padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    border-bottom: 3px solid #ff4500;
 }
-
 /* Header text */
 h1 {
-    font-family: 'Creepster', cursive; 
-    text-align: center;
+    font-family: 'Creepster', cursive;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-/* Space between nav-bar and header text */
 .navbar {
     text-align: center;
     margin-bottom: 30px;
-}
-
-/* Background image */
-body {
-    background-image: url('../Images/main_back.jpg');
-    background-size: cover;
-    background-position: center;  
+    padding: 10px;
 }
 
 /* Main section text */
 p {
-    font-family:cursive;
-    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 25px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
 }
 
-/* Visit our Shop-button */
-.custom-btn{
-    background-color: #333 !important; /* Anpassad färg */
+/* Shop-button */
+.custom-btn {
+    background-color: #ff4500 !important;
     color: white !important;
-    position: relative;
-    z-index: 2;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.custom-btn:hover {
+    background-color: #cc3700 !important;
+    transform: scale(1.1);
 }
 
 /* Spider animation */
-.rotate-img{
+.rotate-img {
     animation: growRotateMoveLogo 7s ease-in-out forwards;
     position: relative;
     z-index: 1;
 }
-
-@keyframes growRotateMoveLogo{
+@keyframes growRotateMoveLogo {
     0% {
-        transform: rotate(0deg);
-        transform: scale(0.1);
+        transform: scale(0.1) rotate(0deg);
     }
     50% {
-        transform: scale(1);
-        transform: rotate(220deg);
-        
+        transform: scale(1) rotate(220deg);
     }
     100% {
-        transform: rotate(186deg) translateY(+1.1cm);
-}}
+        transform: scale(1) rotate(186deg) translateY(+1.1cm);
+    }
+}
 
-/* Bottom border */
 footer {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.9);
     color: white;
     text-align: center;
     padding: 10px;
+    border-top: 3px solid #ff4500;
 }
 
 

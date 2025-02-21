@@ -1,47 +1,73 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    text-align: center;
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    background: linear-gradient(to bottom, #b4baca, #d4d8dc);
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: #333;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #ff4500;
+}
+
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-top: 50px;
+    color: #ff4500;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 p {
     font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+    margin-top: 10px;
 }
+
 ul li {
     margin: 10px 0;
 }
+
 ul li a {
-    color: #007bff;
+    color: #ff4500;
     text-decoration: none;
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
 }
+
 ul li a:hover {
     text-decoration: underline;
+    color: #e03e00;
 }
-
-.dead_spider {
-    width: 100px; /* Justera storleken efter behov */
-    height: auto;
-    margin-top: 10px;
-    opacity: 0.8; /* Gör bilden lite transparent för en snyggare effekt */
-}
-
 
 footer {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.9);
     color: white;
     text-align: center;
     padding: 20px;
-    position: fixed;
     width: 100%;
-    bottom: 0;
+    border-top: 3px solid #ff4500;
+    margin-top: auto;
 }
