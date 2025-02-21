@@ -86,39 +86,42 @@ document.addEventListener("DOMContentLoaded", () =>{
     let total = 0;
      
 // Här loopar jag igenom varje element i "products" och gör något med dessa element
-    products.forEach((product, index) => {
+   // Skapa ett fragment för att samla alla produktkort utan att uppdatera DOM direkt
+const fragment = document.createDocumentFragment();
 
-        /* 1. Skapar en div-behållare för varje produkt
-           2. Skapar en responsiv layout med Bootstrap CSS för div:en */
-        const productCard = document.createElement("div");
-        productCard.classList.add("col-md-4", "mb-4");
+products.forEach((product, index) => {
 
-        // Varje div productCard får sitt innehåll  bild, namn, price och köpknapp
-        productCard.innerHTML = `
-            <div class="card h-100">
-                <img src="${product.img}" class="card-img-top"
-                 ${index < 3 ? "" : 'loading="lazy"'} 
-                 alt="${product.name}">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">${product.name}</h5>
-                    <p class="card-text"><em>(${product.latinName})</em></p>
-                    <button class="btn btn-link btn-sm mt-auto view-details" data-index="${index}">View Description</button>
-                    <p class="card-text">${product.price} SEK</p>
-                    <button class="btn btn-success mt-auto add-to-cart">Add to Cart</button>
-                </div>
+    /* 1. Skapar en div-behållare för varje produkt
+       2. Skapar en responsiv layout med Bootstrap CSS för div:en */
+    const productCard = document.createElement("div");
+    productCard.classList.add("col-md-4", "mb-4");
+
+    // Varje div productCard får sitt innehåll bild, namn, price och köpknapp
+    productCard.innerHTML = `
+        <div class="card h-100">
+            <img src="${product.img}" class="card-img-top"
+             ${index < 3 ? "" : 'loading="lazy"'} 
+             alt="${product.name}">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">${product.name}</h5>
+                <p class="card-text"><em>(${product.latinName})</em></p>
+                <button class="btn btn-link btn-sm mt-auto view-details" data-index="${index}">View Description</button>
+                <p class="card-text">${product.price} SEK</p>
+                <button class="btn btn-success mt-auto add-to-cart">Add to Cart</button>
             </div>
-        `;
+        </div>
+    `;
 
-        // Nu fäster jag mitt productCard i min productContainer som sen visar innehållet i html
-        productContainer.appendChild(productCard);
+    fragment.appendChild(productCard);
 
-        // Eventlistener med click för Add to Cart
-        productCard.querySelector(".add-to-cart").addEventListener("click", function(event) {
-            addToCart(product);
-            showAddedConfirmation(event.target); // Här använder vi event.target för knappen
-        });
-        
+    // Eventlistener med click för Add to Cart
+    productCard.querySelector(".add-to-cart").addEventListener("click", function(event) {
+        addToCart(product);
+        showAddedConfirmation(event.target); // Här använder vi event.target för knappen
     });
+});
+productContainer.appendChild(fragment);
+
 
     // Event för "View Details"-knapp i modal
     document.addEventListener("click", (event) => {
