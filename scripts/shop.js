@@ -113,9 +113,11 @@ document.addEventListener("DOMContentLoaded", () =>{
         productContainer.appendChild(productCard);
 
         // Eventlistener med click för Add to Cart
-        productCard.querySelector(".add-to-cart").addEventListener("click", () => {
+        productCard.querySelector(".add-to-cart").addEventListener("click", function(event) {
             addToCart(product);
+            showAddedConfirmation(event.target); // Här använder vi event.target för knappen
         });
+        
     });
 
     // Event för "View Details"-knapp i modal
@@ -140,14 +142,18 @@ document.addEventListener("DOMContentLoaded", () =>{
             addToCart(selectedProduct); // 🔥 Lägg till vald produkt i kundvagnen
 
             const addToCartButton = document.querySelector(".add-to-cart-modal");
-            addToCartButton.textContent = "Added!";
-
-            setTimeout(() => {
-                addToCartButton.textContent = "Add to Cart";
-            }, 500);
+            showAddedConfirmation(addToCartButton);
         }
     });
 
+// Funktion för att ge bekräftelse på köp 
+    function showAddedConfirmation(button) {
+        button.textContent = "Added!";
+        setTimeout(() => {
+            button.textContent = "Add to Cart";
+        }, 500);
+    }
+    
 // Funktion för att lägga till köp i kundvagnen "Cart"
     function addToCart(product){
 
