@@ -48,12 +48,29 @@ h2 {
     border-bottom: 3px solid #ff4500;
 }
 
+.added {
+    background-color: #28a745 !important;
+    color: white !important;
+}
+
 .product-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
+.product-container img {
+    width: 100%; /* Gör bilderna responsiva så de anpassar sig till containerbredden */
+    height: 200px; /* Sätt en fast höjd på bilderna */
+    object-fit: cover; /* Bevarar bildens proportioner och beskär den om den är för stor */
+}
+.product-container .product-card {
+    width: 100%;
+    height: 350px; /* Sätt en fast höjd på produktkortet */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
 .cart-container {
     padding: 20px 15%;
     margin: 0 auto 40px auto;

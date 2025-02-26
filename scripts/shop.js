@@ -100,7 +100,7 @@ products.forEach((product, index) => {
     productCard.innerHTML = `
         <div class="card h-100">
             <img src="${product.img}" class="card-img-top"
-             ${index < 3 ? "" : 'loading="lazy"'} 
+             ${index < 1 ? "" : 'loading="lazy"'} 
              alt="${product.name}">
             <div class="card-body d-flex flex-column">
                 <h5 class="card-title">${product.name}</h5>
@@ -150,12 +150,15 @@ productContainer.appendChild(fragment);
     });
 
 // Funktion för att ge bekräftelse på köp 
-    function showAddedConfirmation(button) {
-        button.textContent = "Added!";
-        setTimeout(() => {
-            button.textContent = "Add to Cart";
-        }, 500);
-    }
+function showAddedConfirmation(button) {
+    button.classList.add("added");
+    button.disabled = true;
+    setTimeout(() => {
+        button.classList.remove("added");
+        button.disabled = false;
+    }, 500);
+}
+
     
 // Funktion för att lägga till köp i kundvagnen "Cart"
     function addToCart(product){
@@ -210,7 +213,7 @@ productContainer.appendChild(fragment);
             .then((chuck) => chuck.json())
             .then((data) => {
                 document.getElementById("chuckJoke").innerHTML = `
-                    <img id="chuckImage" src="${chuckImg.img}" alt="Picture of Chuck Norris">
+                    <img id="chuckImage" src="${chuckImg.img}" alt="Picture of Chuck Norris" loading="lazy">
                     <p>${data.value}</p>
                 `;
     
