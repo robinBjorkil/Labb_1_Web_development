@@ -91,7 +91,7 @@ const fragment = document.createDocumentFragment();
 
 products.forEach((product, index) => {
 
-    /* 1. Skapar en div-behållare för varje produkt
+         /* 1. Skapar en div-behållare för varje produkt
        2. Skapar en responsiv layout med Bootstrap CSS för div:en */
     const productCard = document.createElement("div");
     productCard.classList.add("col-md-4", "mb-4");
@@ -119,7 +119,9 @@ products.forEach((product, index) => {
         addToCart(product);
         showAddedConfirmation(event.target); // Här använder vi event.target för knappen
     });
+   
 });
+
 productContainer.appendChild(fragment);
 
 
@@ -149,6 +151,16 @@ productContainer.appendChild(fragment);
         }
     });
 
+// Funktion för visningen av kundvagnen
+function toggleCartVisibility() {
+    const cartContainer = document.querySelector(".cart-container");
+    if (cart.length === 0) {
+        cartContainer.classList.add("hidden");
+    } else {
+        cartContainer.classList.remove("hidden");
+    }
+}
+    
 // Funktion för att ge bekräftelse på köp 
 function showAddedConfirmation(button) {
     button.classList.add("added");
@@ -182,7 +194,8 @@ function showAddedConfirmation(button) {
         // Eventlistener med click för X-knappen för att ta bort
         cartItem.querySelector(".remove-from-cart").addEventListener("click", () => {
             removeFromCart(product, cartItem);
-        });  
+        });
+        toggleCartVisibility();
     }
 
 // Funktion för att ta bort enskilda rader med köp i kundvagn
@@ -190,6 +203,8 @@ function showAddedConfirmation(button) {
         cartList.removeChild(cartItem);
         cart.splice(cart.indexOf(product), 1);
         updateTotal(-product.price);
+
+        toggleCartVisibility();
     }
 
 // Funktion för att uppdatera totalpriset i kundvagnen
@@ -204,6 +219,8 @@ function showAddedConfirmation(button) {
         cart = [];
         total = 0;
         totalPriceElement.textContent = "Total 0 SEK";
+
+        toggleCartVisibility();
     });
 
     let chuckImg = { img: "Images/chuck_spider.webp" };
@@ -224,4 +241,5 @@ function showAddedConfirmation(button) {
     
     fetchJoke();
 
+    toggleCartVisibility();
 });

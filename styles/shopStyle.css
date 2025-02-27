@@ -59,13 +59,13 @@ h2 {
     padding: 0 20px;
 }
 .product-container img {
-    width: 100%; /* Gör bilderna responsiva så de anpassar sig till containerbredden */
-    height: 200px; /* Sätt en fast höjd på bilderna */
-    object-fit: cover; /* Bevarar bildens proportioner och beskär den om den är för stor */
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
 }
 .product-container .product-card {
     width: 100%;
-    height: 350px; /* Sätt en fast höjd på produktkortet */
+    height: 350px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -79,6 +79,9 @@ h2 {
     background-color: #fff;
     width: 80%;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.hidden {
+    display: none;
 }
 
 .modal-header {
